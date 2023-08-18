@@ -1,0 +1,6 @@
+version: "3"
+services:
+  compose_app:
+      image: simple_flask_app
+      ports:
+        - 5000:5000
