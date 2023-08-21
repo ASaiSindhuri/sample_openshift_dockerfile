@@ -13,8 +13,8 @@ RUN apt-get update
 RUN apt-get update
 RUN apt-get install -y python
   
-RUN python3 --version
-RUN pip3 install flask
+RUN python --version
+RUN pip install flask
 
 COPY app.py app.py 
 
