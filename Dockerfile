@@ -10,8 +10,6 @@ RUN apt-get update
 # RUN apt-get clean && \
 #     rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install -y build-essential curl
-RUN python3.6 -m easy_install pip
 RUN apt-get update
 RUN apt-get install -y python3.6-venv
   
