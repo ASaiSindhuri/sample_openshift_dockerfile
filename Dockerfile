@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-RUN apt-get update && apt-get install -y python3.7.0 python3-pip
+RUN apt-get update && apt-get install -y python3.5.2 python3-pip
 
 RUN pip3 install flask
 
