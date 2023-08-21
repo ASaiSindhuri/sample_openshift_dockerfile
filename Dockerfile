@@ -11,7 +11,7 @@ RUN apt-get update
 #     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update
-RUN apt-get install -y python3.6-venv
+RUN apt-get install -y python
   
 RUN python3 --version
 RUN pip3 install flask
