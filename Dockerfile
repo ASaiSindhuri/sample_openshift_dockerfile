@@ -10,14 +10,15 @@
 
 FROM ubuntu:16.04
 RUN apt-get update && \
-    apt-get install -y software-properties-common
-RUN apt-get update && \
-    apt-get install -y python3.6 python3.6-distutils && \
-    wget https://bootstrap.pypa.io/get-pip.py && \
-    python3.6 get-pip.py && \
-    rm get-pip.py
-RUN python3.6 --version && \
-    pip3.6 --version
+    apt-get install -y build-essential wget
+RUN wget https://www.python.org/ftp/python/3.6.15/Python-3.6.15.tgz && \
+    tar -xzvf Python-3.6.15.tgz && \
+    cd Python-3.6.15
+RUN cd Python-3.6.15 && \
+    ./configure --enable-optimizations && \
+    make && \
+    make install
+RUN python3.6 --version
 RUN pip3.6 install flask
 COPY app.py app.py 
 
